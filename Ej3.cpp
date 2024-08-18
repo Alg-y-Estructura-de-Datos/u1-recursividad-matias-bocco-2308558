@@ -1,9 +1,18 @@
 #include <iostream>
-using namespace std;
-
+void invertir(int a);
 int main() {
-
-    cout << "Examen Final Prog 3" << endl;
-
+int a;
+    std::cout << "Ingrese el numero a evaluar\n";
+std::cin>>a;
+invertir(a);
     return 0;
 }
+void invertir(int a){
+    if (a<0 || a==0){
+        std::cout<<"Ingrese un numero positivo\n";}
+    else if (a<10){
+        std::cout<<a;
+    }else{
+        std::cout<<a%10;
+        invertir(a/10);
+    }}
